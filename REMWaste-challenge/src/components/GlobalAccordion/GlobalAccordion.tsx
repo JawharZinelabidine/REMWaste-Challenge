@@ -6,17 +6,20 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { Skip } from "../../pages/SkipPicker/SkipSizePicker";
 import { ArrowDownIcon } from "../../assets/Icons/ArrowDown";
-import fourYarder from "../../assets/Images/4-yarder-skip.jpg"
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { PrimaryButton } from "../PrimaryButton/PrimaryButton";
+import { ArrowRightIcon } from "../../assets/Icons/ArrowRight";
+import { WeightIcon } from "../../assets/Icons/WeightIcon";
 
 interface Props {
     skip: Skip;
     index: number;
-    onClick?: () => void;
+    selected: number | null;
+    onClick: () => void;
 }
 
-const GlobalAccordion = ({ skip, index, onClick }: Props) => {
+const GlobalAccordion = ({ skip, index, selected, onClick }: Props) => {
     const navigate = useNavigate();
 
     const theme = useTheme();
@@ -32,18 +35,35 @@ const GlobalAccordion = ({ skip, index, onClick }: Props) => {
                 className="accordion-header"
                 style={{ borderRadius: index === 0 ? "0.5rem 0.5rem 0rem 0rem" : undefined }}
             >
-                <span className="skip-header">
+                <span className="skip-header" style={{ width: isMobile ? "95%" : "98%" }}>
                     <Typography component="span" className="skip-title">{`${skip.size} Yard Skip`}</Typography>
-                    <Typography component="span" className="skip-price">{`£${skip.price_before_vat + (skip.price_before_vat * skip.vat / 100)}`}</Typography>
+                    <Typography component="span" className="skip-price">{`£${(skip.price_before_vat + (skip.price_before_vat * skip.vat / 100)).toFixed(0)}`}</Typography>
                 </span>
             </AccordionSummary>
             <AccordionDetails className="accordion-body" style={{ borderRadius: "0.5rem" }}>
-                <span className="skip-image-container">
-                    <img src={fourYarder} className="skip-image" style={{ width: isMobile ? "100%" : "34rem", height: isMobile ? "14rem" : "21rem" }} />
-                </span>
-                <Typography className="skip-description">
-                    {`${skip.hire_period_days} day hire period`}
-                </Typography>
+                <div className={isMobile ? "skip-body-mobile" : "skip-body"}>
+                    <div>
+                        <span className="skip-image-container">
+                            <img src={skip.image} className="skip-image" style={{ width: isMobile ? "100%" : "34rem", height: isMobile ? "14rem" : "21rem" }} />
+                            <div
+                                className={`skip-pill ${isMobile ? "mobile" : ""}`}
+                            >
+                                <div className="skip-image-pill">
+                                    <WeightIcon />
+                                    {skip.size}
+                                </div>
+
+                            </div>
+
+                        </span>
+                        <Typography className="skip-description">
+                            {`${skip.hire_period_days} day hire period`}
+                        </Typography>
+                    </div>
+                    <div className={isMobile ? "skip-button-mobile" : "skip-button"}>
+                        <PrimaryButton selected={selected === index} text={selected === index ? "Selected" : "Select This Skip"} icon={selected !== index ? <ArrowRightIcon /> : null} color={selected === index ? "var(--primary)" : "var(--secondary)"} width={isMobile ? "100%" : "15rem"} onClicked={onClick} />
+                    </div>
+                </div>
             </AccordionDetails>
         </Accordion>
     );

@@ -1,6 +1,7 @@
 .accordion-header {
     background: #ffffff !important;
     border: 1px solid #e2e8f0 !important;
+    z-index: 99;
 
 }
 
@@ -16,7 +17,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 98%;
 }
 
 .skip-title {
@@ -55,8 +55,21 @@
     color: var(--text) !important;
 }
 
+.skip-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skip-body-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .skip-image-container {
     position: relative;
+
 
 }
 
@@ -68,6 +81,57 @@
 
 }
 
+.skip-pill {
+    position: absolute;
+    bottom: 280px;
+    right: 20px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 45px;
+    border: none;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile {
+
+    bottom: 172px;
+    right: 15px;
+}
+
+.skip-image-pill {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.3rem;
+    font-family: var(--font-family-8);
+    color: var(--white-text);
+}
+
+
 .css-1808mag-MuiPaper-root-MuiAccordion-root.Mui-expanded {
     margin: 0 !important;
+}
+
+.skip-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.skip-button-mobile {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }

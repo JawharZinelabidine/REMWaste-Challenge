@@ -76,33 +76,20 @@
 
 :root {
   /* Colors */
-  --primary: #dc2626;
-  --primary-disabled: #dac39280;
-  --primary2: #ceae6a;
-  --primary-hover: hsl(33, 38%, 94%);
+  --primary: #ef4444;
+  --primary-hover: #b91c1c;
   --secondary: #fdba74;
-  --third: #41629b;
+  --secondary-hover: #fed7aa;
   --background: #fff7ed;
   --heading-text: #1f2937;
   --subheading-text: #374151;
   --text: #1c1917;
-  --black: #222222;
-  --black-disabled: #d3d3d3;
+  --white-text: #ffffff;
   --description: #010101;
   --grey: #a8a29e;
   --dark-grey: #696969;
   --darker-grey: #666666;
-  --green: #7cb342;
-  --background-green: #7cb3421a;
-  --disabled-green: #a8c88d;
-  --error: #c24d4d;
-  --background-error: #fcebec;
-  --pending: #ffa500;
-  --background-pending: #ffa5001a;
   --background-primary: #f4f4f4;
-  --gold: #fadb29;
-  --disabled-bg: #e0e0e0;
-  --disabled-text: #666;
 
   /* Fonts */
   --font-family-1: "Inter";

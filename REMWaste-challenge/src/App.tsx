@@ -7,6 +7,8 @@ import SkipSizePicker from './pages/SkipPicker/SkipSizePicker';
 import GlobalStepper from './components/Stepper/Stepper';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import WasteType from './pages/WasteType/WasteType';
+import PermitCheck from './pages/PermitCheck/PermitCheck';
 
 function App() {
 
@@ -31,6 +33,15 @@ function App() {
                     {/* <NavBar /> */}
                     <Routes>
                       <Route
+                        path="/waste-type"
+                        element={
+                          <div style={{ display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: 'space-between' }}>
+                            <GlobalStepper page={2} />
+                            <WasteType />
+                          </ div>
+                        }
+                      />
+                      <Route
                         path="/"
                         element={
                           <div style={{ display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: 'space-between' }}>
@@ -39,7 +50,15 @@ function App() {
                           </ div>
                         }
                       />
-                      {/* <Route path="/*" element={<ErrorPage />} /> */}
+                      <Route
+                        path="/permit-check"
+                        element={
+                          <div style={{ display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: 'space-between' }}>
+                            <GlobalStepper page={4} />
+                            <PermitCheck />
+                          </ div>
+                        }
+                      />
                     </Routes>
                     {/* <Footer /> */}
                   </div>
