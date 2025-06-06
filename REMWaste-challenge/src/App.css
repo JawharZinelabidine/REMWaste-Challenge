@@ -1,42 +1,161 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app-body {
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  background-color: var(--background);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 1366px) {
+  .app-body {
+    min-height: 126vh;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@font-face {
+  font-family: "DMSans";
+  src: url("../src/assets/fonts/DMSans-VariableFont_opsz,wght.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/assets/fonts/Montserrat-VariableFont_wght.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../src/assets/fonts/Poppins-Regular.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../src/assets/fonts/Poppins-Light.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../src/assets/fonts/Poppins-SemiBold.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Italic";
+  src: url("../src/assets/fonts/Poppins-Italic.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../src/assets/fonts/Poppins-Medium.ttf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../src/assets/fonts/Helvetica.otf") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  /* Colors */
+  --primary: #dc2626;
+  --primary-disabled: #dac39280;
+  --primary2: #ceae6a;
+  --primary-hover: hsl(33, 38%, 94%);
+  --secondary: #fdba74;
+  --third: #41629b;
+  --background: #fff7ed;
+  --heading-text: #1f2937;
+  --subheading-text: #374151;
+  --text: #1c1917;
+  --black: #222222;
+  --black-disabled: #d3d3d3;
+  --description: #010101;
+  --grey: #a8a29e;
+  --dark-grey: #696969;
+  --darker-grey: #666666;
+  --green: #7cb342;
+  --background-green: #7cb3421a;
+  --disabled-green: #a8c88d;
+  --error: #c24d4d;
+  --background-error: #fcebec;
+  --pending: #ffa500;
+  --background-pending: #ffa5001a;
+  --background-primary: #f4f4f4;
+  --gold: #fadb29;
+  --disabled-bg: #e0e0e0;
+  --disabled-text: #666;
+
+  /* Fonts */
+  --font-family-1: "Inter";
+  --font-family-2: "DMSans";
+  --font-family-3: "Montserrat";
+  --font-family-4: "Poppins";
+  /*400*/
+  --font-family-5: "Poppins-Light";
+  /*300*/
+  --font-family-6: "Poppins-SemiBold";
+  /*600*/
+  --font-family-7: "Poppins-Italic";
+  --font-family-8: "Poppins-Medium";
+  /*500*/
+  --font-family-9: "Helvetica";
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  padding-left: 10px;
+  overflow: hidden;
+  margin-left: 1rem;
+  /* Default for LTR */
+  transition: margin-left 0.3s, margin-right 0.3s;
+  /* Add margin-right transition */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.main-content h1 {
+  color: #0f172a;
+  font-family: var(--font-family-1);
+}
+
+.rtl .main-content h1 {
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 70px;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media (max-width: 480px) {
 
-.read-the-docs {
-  color: #888;
+  .main-content {
+    margin-left: 0;
+    margin-right: 0;
+    /* Reset both for mobile */
+    padding-top: 20px;
+  }
 }

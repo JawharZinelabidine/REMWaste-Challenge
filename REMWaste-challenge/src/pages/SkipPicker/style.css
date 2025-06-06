@@ -1,0 +1,56 @@
+.home-bottom {
+    min-height: 100vh;
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 4rem; */
+}
+
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+.home-big-header {
+    margin-top: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--font-family-1);
+    color: var(--heading-text);
+}
+
+.home-small-header {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-family: var(--font-family-1);
+    color: var(--subheading-text);
+}
+
+.skip-picker-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.home-trips-row {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem;
+    width: 100%;
+}
+
+
+.trip-card-wrapper {
+    position: relative;
+}
+
+.css-1808mag-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+    margin-bottom: 0 !important;
+}
