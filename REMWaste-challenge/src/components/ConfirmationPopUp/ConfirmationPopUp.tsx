@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "../../assets/Icons/ArrowRight";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
-interface Props<T extends Record<string, any>> {
+interface Props {
     onConfirm: (event?: any) => void;
     onClose: () => void;
     isOpen: boolean;
@@ -14,7 +14,7 @@ interface Props<T extends Record<string, any>> {
     price?: number | null;
     hire?: number | null;
 }
-const ConfirmationPopUp = <T extends Record<string, any>>({ width, height, onConfirm, onClose, isOpen, size, price, hire }: Props<T>) => {
+const ConfirmationPopUp = ({ width, height, onConfirm, onClose, isOpen, size, price, hire }: Props) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 

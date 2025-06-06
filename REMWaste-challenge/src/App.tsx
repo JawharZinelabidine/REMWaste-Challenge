@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import {
   BrowserRouter as Router, Routes, Route
@@ -11,7 +10,6 @@ import WasteType from './pages/WasteType/WasteType';
 import PermitCheck from './pages/PermitCheck/PermitCheck';
 
 function App() {
-
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -30,7 +28,6 @@ function App() {
               element={
                 <>
                   <div className={containerClass2}>
-                    {/* <NavBar /> */}
                     <Routes>
                       <Route
                         path="/waste-type"
@@ -60,7 +57,6 @@ function App() {
                         }
                       />
                     </Routes>
-                    {/* <Footer /> */}
                   </div>
                 </>
               }

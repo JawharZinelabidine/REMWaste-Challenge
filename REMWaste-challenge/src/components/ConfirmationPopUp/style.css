@@ -107,9 +107,6 @@
     cursor: pointer;
 }
 
-.rtl .ConfirmButton {
-    font-family: inherit;
-}
 
 .CancelButton {
     font-family: var(--font-family-1);
@@ -123,66 +120,4 @@
     font-weight: 500;
     cursor: pointer;
     color: var(--text);
-}
-
-.rtl .CancelButton {
-    font-family: inherit;
-}
-
-.popup-error-list-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 4rem;
-    padding-right: 2rem;
-    overflow-y: auto;
-    max-height: 400px;
-}
-
-.popup-list-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0.5rem;
-    padding-right: 2rem;
-    overflow-y: auto;
-    max-height: 400px;
-    margin-bottom: 1rem;
-}
-
-.rtl .popup-error-list-container {
-    padding-left: 2rem;
-    padding-right: 4rem;
-}
-
-.rtl .popup-list-container {
-    padding-left: 2rem;
-    padding-right: 0.5rem;
-}
-
-.popup-list {
-    margin: 0;
-    display: flex;
-    align-items: start;
-    gap: 8px;
-    flex-direction: column;
-}
-
-.ConfirmationContainer ::-webkit-scrollbar {
-    width: 8px;
-}
-
-.ConfirmationContainer ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.ConfirmationContainer ::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
-}
-
-.popup-error-list {
-    margin: 8px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
