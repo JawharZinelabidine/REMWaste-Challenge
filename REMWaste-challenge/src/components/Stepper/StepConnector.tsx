@@ -2,7 +2,7 @@ import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import React from 'react';
+import { useMemo } from 'react';
 
 const getCustomConnector = (isMobile: boolean) =>
     styled(StepConnector)(({ theme }) => ({
@@ -26,7 +26,7 @@ const getCustomConnector = (isMobile: boolean) =>
 export const CustomConnector = (props: any) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const StyledConnector = React.useMemo(() => getCustomConnector(isMobile), [isMobile]);
+    const StyledConnector = useMemo(() => getCustomConnector(isMobile), [isMobile]);
 
     return <StyledConnector {...props} />;
 };
