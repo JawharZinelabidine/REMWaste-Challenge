@@ -1,11 +1,11 @@
 import GlobalAccordion from "../../components/GlobalAccordion/GlobalAccordion";
 import "./style.css";
-// import { PrimaryButton } from "../../components/PrimaryButton/PrimaryButton";
 import { useEffect, useState } from "react";
-// import dayjs from "dayjs";
 import skips from "../../../skips.json"
 import ConfirmationPopUp from "../../components/ConfirmationPopUp/ConfirmationPopUp";
 import { useNavigate } from "react-router-dom";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 export interface Skip {
     id: number,
@@ -27,6 +27,9 @@ export interface Skip {
 
 const SkipSizePicker = () => {
     const navigate = useNavigate();
+
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const [selected, setSelected] = useState<number | null>(null)
     const [selectedSize, setSelectedSize] = useState<number | null>(null)
@@ -81,7 +84,7 @@ const SkipSizePicker = () => {
                     ))}
                 </div>
                 <ConfirmationPopUp
-                    height={8}
+                    height={isMobile ? 13 : 8}
                     width={50}
                     size={selectedSize}
                     price={selectedPrice}

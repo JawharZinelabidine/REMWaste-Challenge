@@ -30,6 +30,12 @@
     justify-content: space-between;
 }
 
+.confirmation-bottom-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .confirmation-info {
     display: flex;
     flex-direction: row;
@@ -37,6 +43,14 @@
     align-items: center;
     gap: 0.7rem;
     margin-top: 1rem;
+}
+
+.confirmation-info-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
 }
 
 .confirmation-yard {
@@ -58,6 +72,16 @@
     justify-content: flex-end;
     gap: 1rem;
     margin-top: 1rem;
+}
+
+.buttons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+
 }
 
 .OkButton {
@@ -95,9 +119,10 @@
     flex-direction: row;
     border: transparent;
     background-color: transparent;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
+    color: var(--text);
 }
 
 .rtl .CancelButton {

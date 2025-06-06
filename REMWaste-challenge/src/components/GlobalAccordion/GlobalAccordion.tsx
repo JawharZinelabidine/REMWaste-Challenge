@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import "./style.css";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -20,7 +19,6 @@ interface Props {
 }
 
 const GlobalAccordion = ({ skip, index, selected, onClick }: Props) => {
-    const navigate = useNavigate();
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
