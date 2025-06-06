@@ -1,0 +1,49 @@
+.primary-button-container {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    font-weight: 550;
+    color: var(--white-text);
+    min-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--font-family-8);
+}
+
+.primary-button-container-unselected:hover {
+    background: var(--secondary-hover) !important
+}
+
+.primary-button-container-selected:hover {
+    background: var(--primary-hover) !important
+}
+
+.primary-button-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+
+.global-add-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 1366px) {
+    .global-add-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,45 @@
+.sidebar {
+    color: #f1f5f9;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    z-index: 1000;
+    flex-shrink: 0;
+    overflow: auto;
+    right: auto;
+}
+
+.css-1deaddp-MuiStepConnector-line {
+    min-height: 4rem !important;
+}
+
+.css-12eb3rq-MuiStepLabel-label {
+    font-family: var(--font-family-1) !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+}
+
+.css-12eb3rq-MuiStepLabel-label {
+    font-size: 100% !important;
+}
+
+
+.css-4h5gel-MuiStepConnector-root .MuiStepConnector-line {
+    border-width: 0.13rem;
+}
+
+/* width */
+.sidebar::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}

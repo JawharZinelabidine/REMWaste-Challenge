@@ -1,0 +1,123 @@
+.ConfirmationContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ConfirmationTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ConfirmationText {
+    font-family: var(--font-family-1);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+.ConfirmationDescription {
+    font-family: var(--font-family-1);
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.confirmation-bottom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.confirmation-bottom-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.confirmation-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.confirmation-info-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.confirmation-yard {
+    font-family: var(--font-family-4);
+    font-size: medium;
+    color: var(--text);
+
+}
+
+.confirmation-price {
+    font-family: var(--font-family-8);
+    font-size: larger;
+    color: var(--primary);
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.buttons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    width: 100%;
+
+}
+
+.OkButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.ConfirmButton {
+    background-color: var(--primary);
+    font-family: var(--font-family-1);
+    border-radius: 10px;
+    width: 4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 2.5rem;
+    border: 0px solid transparent;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.CancelButton {
+    font-family: var(--font-family-1);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    border: transparent;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text);
+}

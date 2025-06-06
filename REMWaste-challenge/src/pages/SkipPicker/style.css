@@ -1,0 +1,43 @@
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+.skip-picker-big-header {
+    margin-top: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--font-family-1);
+    color: var(--heading-text);
+}
+
+.skip-picker-small-header {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-family: var(--font-family-1);
+    color: var(--subheading-text);
+}
+
+.skip-picker-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skip-picker-row {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem;
+    width: 100%;
+}
+
+
+.css-1808mag-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+    margin-bottom: 0 !important;
+}
